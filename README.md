@@ -17,7 +17,7 @@ Live site: https://ancplaboldenburg.github.io/indos-eeg101-workshops-brainhack/
   - Saturday morning: `MEEGqc` (reproducible MEG/EEG QA/QC on BIDS datasets)
 - **EEG101 (CA24148)** brings the parallel WG1 / WG2 / WG3 programme:
   - WG1: ARTEM-IS demo, journals-implementation discussion, ARTEM-IS Lexicon Hacktrack, ARTEM-IS stress-testing Hacktrack
-  - WG2: RS-BIDSify workshop, harmonisation community debate, open-source clinic, future-collaboration planning
+  - WG2: RS-BIDSify workshop, harmonisation community debate
   - WG3: EEG Community Framework introduction TrainTrack, Ambassador TrainTrack, Gamification Hacktrack, Stakeholder Mapping Hacktrack
 
 The full programme (including session leads sourced from the OHBM

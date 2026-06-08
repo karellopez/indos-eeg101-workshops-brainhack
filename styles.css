@@ -1014,6 +1014,102 @@ body::before {
 
 .featured-session { border-color: color-mix(in srgb, var(--mint), transparent 60%); }
 
+/* Install-in-advance callout on the INDoS TrainTrack cards. Neon text needs
+   a dark backdrop to glow, so the callout keeps its own dark panel in both
+   themes. */
+.install-callout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+  margin: 14px 0 4px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(77, 227, 255, 0.45);
+  background:
+    radial-gradient(120% 160% at 0% 0%, rgba(77, 227, 255, 0.16), transparent 60%),
+    linear-gradient(135deg, #0a1018 0%, #0e1726 100%);
+  box-shadow:
+    0 0 0 1px rgba(77, 227, 255, 0.10) inset,
+    0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.install-notice {
+  flex: 1 1 320px;
+  margin: 0 !important;
+  color: #eafcff !important;
+  font-size: 1.04rem;
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: 0.005em;
+  text-shadow:
+    0 0 4px rgba(255, 255, 255, 0.92),
+    0 0 10px #4de3ff,
+    0 0 20px #4de3ff,
+    0 0 34px #20b6ff;
+  animation: neonPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 4px rgba(255, 255, 255, 0.92),
+      0 0 10px #4de3ff,
+      0 0 20px #4de3ff,
+      0 0 34px #20b6ff;
+  }
+  50% {
+    text-shadow:
+      0 0 6px rgba(255, 255, 255, 1),
+      0 0 16px #6cf0ff,
+      0 0 30px #4de3ff,
+      0 0 54px #20b6ff;
+  }
+}
+
+.virtual-room-button {
+  flex: 0 0 auto;
+  gap: 9px;
+  color: #04121a !important;
+  background: linear-gradient(135deg, #19e0c0 0%, #4de3ff 100%);
+  border: 1px solid rgba(108, 240, 255, 0.9);
+  box-shadow:
+    0 0 12px rgba(77, 227, 255, 0.55),
+    0 0 26px rgba(25, 224, 192, 0.32);
+  animation: roomGlow 2.4s ease-in-out infinite;
+}
+.virtual-room-button:hover {
+  color: #04121a !important;
+  filter: brightness(1.07);
+  transform: translateY(-1px);
+  text-decoration: none;
+  box-shadow:
+    0 0 18px rgba(77, 227, 255, 0.8),
+    0 0 38px rgba(25, 224, 192, 0.5);
+}
+.virtual-room-button:focus-visible {
+  outline: 2px solid #eafcff;
+  outline-offset: 3px;
+}
+
+.virtual-room-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #04121a;
+  box-shadow: 0 0 0 3px rgba(4, 18, 26, 0.28);
+  animation: roomDot 1.4s ease-in-out infinite;
+}
+
+@keyframes roomGlow {
+  0%, 100% { box-shadow: 0 0 12px rgba(77, 227, 255, 0.55), 0 0 26px rgba(25, 224, 192, 0.32); }
+  50%      { box-shadow: 0 0 18px rgba(77, 227, 255, 0.8), 0 0 40px rgba(25, 224, 192, 0.52); }
+}
+@keyframes roomDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.78); }
+}
+
 /* ---------- COST notice ---------- */
 .cost-action-note {
   max-width: var(--max);
